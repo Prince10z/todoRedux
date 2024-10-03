@@ -1,0 +1,94 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.mainContainer{
+ height: 100vh;
+ box-sizing: border-box;
+ padding: 30px;
+ animation: mymove 3s infinite;
+}
+@keyframes mymove {
+  0%   {background-color: rgba(119, 52, 52, 0.433)}
+  33%  {background-color: rgba(0, 0, 255, 0.433);}
+  100% {background-color: rgba(0, 128, 0, 0.433);}
+}
+.titleContainer{
+width: 100%;
+display: flex;
+justify-content: center;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+input{
+  /* border-radius: 10px; */
+border:none;
+  padding: 7px;
+  background-color: transparent;
+  color: black;
+  font-weight: 600;
+  box-sizing: content-box;
+  width: 400px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: larger;
+  outline: none;
+}
+/* input:focus{
+  border:none;
+
+} */
+.InputContainer{
+  margin: 20px 0px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+button{
+  background-color: green;
+  color: white;
+  padding: 0px 20px;
+  outline: none;
+  border-radius: 10px;
+  border-color: green;
+}
+
+.TasksContainer{
+  border-radius: 20px;
+  /* height: 30px; */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.356);
+}
+.Task{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  /* text-decoration: line-through; */
+  margin: 10px;
+}
+.taskradio {
+  appearance: none; /* Remove default checkbox style */
+  width: 10px;
+  height: 10px;
+  border: 2px solid black;
+  border-radius: 50%; /* Makes it look like a radio button or round checkbox */
+  position: relative;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.taskradio:checked {
+  background-color: green; /* Change color when checked */
+  border: 2px solid green;
+}
+
+.taskradio:checked::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: white; /* Inner circle or tick mark */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  
+}
