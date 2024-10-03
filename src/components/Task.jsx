@@ -4,10 +4,8 @@ import { toggleTodo, deleteTODO } from "../redux/actions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 const Task = (props) => {
-  const [task, settask] = useState(props.todo.completed);
   const dispatch = useDispatch();
   const donetask = (val) => {
-    settask(val);
     dispatch(toggleTodo(props.todo.id));
   };
   const deletetask = () => {
@@ -22,7 +20,7 @@ const Task = (props) => {
         <input
           type="checkbox"
           className="taskradio"
-          value={task}
+          value={props.todo.completed}
           onChange={(e) => donetask(e.target.checked)}
         />
         {props.todo.text}
